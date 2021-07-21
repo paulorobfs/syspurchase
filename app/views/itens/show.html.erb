@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Merchant:</strong>
+  <%= @iten.merchant_id %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @iten.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @iten.price %>
+</p>
+
+<%= link_to 'Edit', edit_iten_path(@iten) %> |
+<%= link_to 'Back', itens_path %>

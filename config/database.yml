@@ -1,0 +1,20 @@
+config: &config
+  adapter: postgresql
+  port: 5432
+  encoding: utf-8
+  pool: 5
+  host: localhost
+  username: syspurchase
+  password: '1q3e@W$R'
+
+development:
+  <<: *config
+  database: syspurchase_dev
+
+test:
+  <<: *config
+  database: syspurchase_test
+
+production:
+  <<: *config
+  database: syspurchase
