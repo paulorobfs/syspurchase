@@ -1,33 +1,40 @@
-<p id="notice"><%= notice %></p>
+<div class="d-flex align-items-center">
+  <div class="p-2 w-50">
+    <h2>
+      <%= Purchase.model_name.human.pluralize %>
+    </h2>
+  </div>
+  <div class="d-flex w-50 flex-row-reverse">
+    <%= link_to 'New', new_purchase_path, class: 'btn btn-success' %>
+  </div>
+</div>
 
-<h1>Purchases</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Item</th>
-      <th>Price</th>
-      <th>Count</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @purchases.each do |purchase| %>
+<div class="card mt-3 mb-3">
+  <div class="card-body ">
+    <table class="table table-striped table-hover">
+      <thead>
       <tr>
-        <td><%= purchase.user_id %></td>
-        <td><%= purchase.item_id %></td>
-        <td><%= purchase.price %></td>
-        <td><%= purchase.count %></td>
-        <td><%= link_to 'Show', purchase %></td>
-        <td><%= link_to 'Edit', edit_purchase_path(purchase) %></td>
-        <td><%= link_to 'Destroy', purchase, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>User</th>
+        <th>Item</th>
+        <th>Price</th>
+        <th>Count</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+      </thead>
 
-<br>
-
-<%= link_to 'New Purchase', new_purchase_path %>
+      <tbody>
+      <% @purchases.each do |purchase| %>
+        <tr>
+          <td><%= purchase.user&.name %></td>
+          <td><%= purchase.item&.description %></td>
+          <td><%= purchase.price %></td>
+          <td><%= purchase.count %></td>
+          <td><%= link_to 'Show', purchase %></td>
+          <td><%= link_to 'Edit', edit_purchase_path(purchase) %></td>
+          <td><%= link_to 'Destroy', purchase, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

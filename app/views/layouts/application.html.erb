@@ -16,7 +16,14 @@
   <% end %>
 
     <div class="container mt-3">
+      <div id="flash_messages">
+        <%= flash_messages %>
+      </div>
       <%= yield %>
     </div>
+
+  <% if user_signed_in? %>
+    <%= render 'layouts/footer' %>
+  <% end %>
   </body>
 </html>

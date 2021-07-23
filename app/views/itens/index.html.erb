@@ -1,31 +1,38 @@
-<p id="notice"><%= notice %></p>
+<div class="d-flex align-items-center">
+  <div class="p-2 w-50">
+    <h2>
+      <%= Item.model_name.human.pluralize %>
+    </h2>
+  </div>
+  <div class="d-flex w-50 flex-row-reverse">
+    <%= link_to 'New', new_iten_path, class: 'btn btn-success' %>
+  </div>
+</div>
 
-<h1>Itens</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Merchant</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @itens.each do |iten| %>
+<div class="card mt-3 mb-3">
+  <div class="card-body ">
+    <table class="table table-striped table-hover">
+      <thead>
       <tr>
-        <td><%= iten.merchant_id %></td>
-        <td><%= iten.description %></td>
-        <td><%= iten.price %></td>
-        <td><%= link_to 'Show', iten %></td>
-        <td><%= link_to 'Edit', edit_iten_path(iten) %></td>
-        <td><%= link_to 'Destroy', iten, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Merchant</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+      </thead>
 
-<br>
-
-<%= link_to 'New Iten', new_iten_path %>
+      <tbody>
+      <% @itens.each do |iten| %>
+        <tr>
+          <td><%= iten.merchant&.name %></td>
+          <td><%= iten.description %></td>
+          <td><%= iten.price %></td>
+          <td><%= link_to 'Show', iten %></td>
+          <td><%= link_to 'Edit', edit_iten_path(iten) %></td>
+          <td><%= link_to 'Destroy', iten, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -2,9 +2,9 @@
   <div class="card-body ">
     <%= form_with(model: merchant, local: true) do |form| %>
       <% if merchant.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(merchant.errors.count, "error") %> prohibited this merchant from being saved:</h2>
-
+        <div id="error_explanation" class="alert alert-danger" role="alert">
+          <h3><%= pluralize(merchant.errors.count, "error") %> prohibited this merchant from being saved:</h3>
+          <hr>
           <ul>
             <% merchant.errors.full_messages.each do |message| %>
               <li><%= message %></li>

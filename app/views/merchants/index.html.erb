@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <div class="d-flex align-items-center">
   <div class="p-2 w-50">
     <h2>
@@ -10,6 +8,7 @@
     <%= link_to 'New', new_merchant_path, class: 'btn btn-success' %>
   </div>
 </div>
+<i class="fa fa-github"></i>
 
 <div class="card mt-3 mb-3">
   <div class="card-body ">
@@ -18,7 +17,7 @@
       <tr>
         <th>Name</th>
         <th>Address</th>
-        <th colspan="3"></th>
+        <th class="center aligned" style="width: 5%;">Actions</th>
       </tr>
     </thead>
 
@@ -27,12 +26,15 @@
         <tr>
           <td><%= merchant.name %></td>
           <td><%= merchant.address %></td>
-          <td><%= link_to 'Show', merchant %></td>
-          <td><%= link_to 'Edit', edit_merchant_path(merchant) %></td>
-          <td><%= link_to 'Destroy', merchant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td class="d-flex gap-3">
+            <%= link_to content_tag(:i, nil, class: 'fa fa-eye lh-base'), merchant, class: 'btn btn-primary', data: {tooltip: 'Show', inverted: ''} %>
+            <%= link_to content_tag(:i, nil, class: 'fa fa-edit lh-base'), edit_merchant_path(merchant) , class: 'btn btn-warning', data: {tooltip: 'Edit', inverted: ''} %>
+            <%= link_to content_tag(:i, nil, class: 'fa fa-trash-alt lh-base'), merchant, method: :delete, data: { confirm: 'Are you sure?', tooltip: 'Destroy', inverted: '' }, class: 'btn btn-danger' %>
+          </td>
         </tr>
       <% end %>
     </tbody>
   </table>
   </div>
 </div>
+

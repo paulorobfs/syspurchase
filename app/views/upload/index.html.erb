@@ -2,13 +2,13 @@
 <p>Faça o upload de dados, basta adicionar o arquivo e confirmar.</p>
 
 <div class="card card-body">
-  <%= form_tag '/processa_arquivo', multipart: true do %>
+  <%= form_tag(upload_processa_arquivo_path, multipart: true) do %>
     <div class="row">
       <div class="col">
-        <%= file_field_tag "file", class: 'form-control' %>
+        <%= file_field_tag "file", class: 'form-control', required: true  %>
       </div>
       <div class="col">
-        <%= submit_tag "Send File", data: { disable_with: "Submitting..." }, class: 'btn btn-success' %>
+        <%= submit_tag "Send File", data: { disable_with: "Submitting..." }, class: 'btn btn-success'%>
       </div>
     </div>
   <% end %>

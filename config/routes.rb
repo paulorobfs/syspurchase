@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'upload/index'
   get 'home/index'
-  post 'upload/processa_arquivo'
+  post 'upload/processa_arquivo', 'upload#processa_arquivo'
   root to: 'home#index'
 
   resources :purchases
