@@ -1,5 +1,12 @@
-<h1>Editing Merchant</h1>
+<div class="d-flex align-items-center">
+  <div class="p-2 w-100">
+    <span class="title-pages">Edit Merchant</span>
+  </div>
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <%= link_to('Back', merchants_path, class: 'btn btn-secondary') %>
+    <%= link_to('Show', @merchant, class: 'btn btn-primary') %>
+  </div>
+</div>
 
 <%= render 'form', merchant: @merchant %>
 
-<%= link_to 'Show', @merchant %>

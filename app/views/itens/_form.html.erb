@@ -1,32 +1,37 @@
-<%= form_with(model: iten, local: true) do |form| %>
-  <% if iten.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(iten.errors.count, "error") %> prohibited this iten from being saved:</h2>
+<div class="card mt-3 mb-3">
+  <div class="card-body ">
+    <%= form_with(model: iten, local: true) do |form| %>
+      <% if iten.errors.any? %>
+        <div id="error_explanation" class="alert alert-danger" role="alert">
+          <h3><%= pluralize(iten.errors.count, "error") %> prohibited this iten from being saved:</h3>
+          <hr>
+          <ul>
+            <% iten.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
 
-      <ul>
-        <% iten.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+      <div class="col-sm-3 mb-3">
+        <%= form.label :merchant, class: 'form-label' %>
+        <%= form.collection_select :merchant_id, Merchant.all, :id, :name, {prompt: 'Select...'}, class: 'form-select' %>
+      </div>
 
-  <div class="field">
-    <%= form.label :merchant_id %>
-    <%= form.text_field :merchant_id %>
+      <div class="form-group col-sm-4 mb-3">
+        <%= form.label :description,  class: 'form-label' %>
+        <%= form.text_field :description,  class: 'form-control' %>
+      </div>
+
+      <div class="form-group col-sm-4 mb-3">
+        <%= form.label :price,  class: 'form-label' %>
+        <%= form.text_field :price,  class: 'form-control' %>
+      </div>
+
+      <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+        <%= link_to 'Cancel', itens_path, class: 'btn btn-danger' %>
+        <%= form.submit nil, class: 'btn btn-success'%>
+      </div>
+    <% end %>
   </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.text_field :price %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

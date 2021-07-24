@@ -1,19 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Merchant:</strong>
-  <%= @iten.merchant_id %>
-</p>
+<div class="card mt-3 mb-3">
+  <div class="card-body ">
 
-<p>
-  <strong>Description:</strong>
-  <%= @iten.description %>
-</p>
+    <p>
+      <strong>
+        Merchant:
+      </strong>
+      <%= @iten.merchant&.name %>
+    </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @iten.price %>
-</p>
+    <p>
+      <strong>Description:</strong>
+      <%= @iten.description %>
+    </p>
 
-<%= link_to 'Edit', edit_iten_path(@iten) %> |
-<%= link_to 'Back', itens_path %>
+    <p>
+      <strong>Price:</strong>
+      <%= @iten.price %>
+    </p>
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+      <%= link_to 'Edit', edit_iten_path(@iten), class: 'btn btn-warning' %>
+      <%= link_to 'Back', itens_path, class: 'btn btn-secondary' %>
+    </div>
+  </div>
+</div>

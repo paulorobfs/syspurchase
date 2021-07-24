@@ -64,6 +64,6 @@ class ItensController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def iten_params
-      params.require(:iten).permit(:merchant_id, :description, :price)
+      params.require(:item).permit(:merchant_id, :description, :price)
     end
 end

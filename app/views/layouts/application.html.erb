@@ -7,7 +7,9 @@
 
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'styles'%>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   </head>
 
   <body>
@@ -15,7 +17,7 @@
     <%= render 'layouts/menu_top' %>
   <% end %>
 
-    <div class="container mt-3">
+    <div class="container mt-3 p-3">
       <div id="flash_messages">
         <%= flash_messages %>
       </div>
@@ -23,7 +25,7 @@
     </div>
 
   <% if user_signed_in? %>
-    <%= render 'layouts/footer' %>
+    <%#= render 'layouts/footer' %>
   <% end %>
   </body>
 </html>

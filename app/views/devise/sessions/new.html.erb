@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="d-flex justify-content-center h-100">
+    <div class="card">
+      <div class="card-header">
+        <h3>Sign In</h3>
+        <div class="d-flex justify-content-end social_icon">
+          <span><i class="fab fa-facebook-square"></i></span>
+          <span><i class="fab fa-google-plus-square"></i></span>
+          <span><i class="fab fa-twitter-square"></i></span>
+        </div>
+      </div>
+      <div class="card-body">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="input-group mb-3">
+            <span class="input-group-text input-group-login-color"><i class="fas fa-user"></i></span>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text input-group-login-color"><i class="fas fa-key"></i></span>
+            <%= f.password_field :password, autocomplete: "current-password", class: 'form-control' %>
+          </div>
+          <div class="row align-items-center remember">
+            <% if devise_mapping.rememberable? %>
+              <div class="field">
+                <%= f.check_box :remember_me %>
+                <%= f.label :remember_me %>
+              </div>
+            <% end %>
+          </div>
+          <div class="form-group">
+            <div class="d-flex justify-content-end">
+              <%= f.submit "Log in", class: 'btn login_btn' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="card-footer">
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+</div>

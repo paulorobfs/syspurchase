@@ -1,14 +1,13 @@
 <div class="d-flex align-items-center">
   <div class="p-2 w-50">
-    <h2>
+    <span class="title-pages">
       <%= User.model_name.human.pluralize %>
-    </h2>
+    </span>
   </div>
   <div class="d-flex w-50 flex-row-reverse">
     <%= link_to 'New', new_user_path, class: 'btn btn-success' %>
   </div>
 </div>
-<i class="fa fa-exclamation-circle"></i>
 
 <div class="card mt-3 mb-3">
   <div class="card-body ">
