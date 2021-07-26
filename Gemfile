@@ -11,7 +11,13 @@ gem 'webpacker', '4.3.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
+
+#autenticacao
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+
 
 #Para realizar checagem do tipo de arquivo independente de extensão
 #gem 'ruby-filemagic', '~> 0.7.1'

@@ -11,6 +11,9 @@ module Syspurchase
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
+    config.assets.paths << Rails.root.join("app", "assets", "fonts", "node_modules")
+    config.autoload_paths << Rails.root.join('lib')
+
     config.generators do |g|
       g.assets            false
       g.system_tests      false

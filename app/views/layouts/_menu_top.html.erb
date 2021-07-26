@@ -22,7 +22,7 @@
                 </li>
             </ul>
             <form class="d-flex">
-                <button class="btn btn-outline-success" type="submit">Logout</button>
+                <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-outline-success" %>
             </form>
         </div>
     </div>

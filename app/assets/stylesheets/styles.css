@@ -16,12 +16,29 @@ html,body{
     background-color: rgba(0,0,0,0.9) !important;
 }
 
+.container-login{
+    height: 100%;
+    align-content: center;
+}
+
 .card-login{
     height: 370px;
     margin-top: auto;
     margin-bottom: auto;
     width: 400px;
-    background-color: rgba(0,0,0,0.5) !important;
+    background-color: rgba(0,0,0,0.7) !important;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    border-radius: 0.25rem;
+}
+
+.input-group-prepend-login{
+    width: 50px;
+    background-color: #FFC312;
+    color: black;
+    border:0 !important;
 }
 
 .card{
@@ -76,7 +93,7 @@ input:focus{
 
 .login_btn{
     color: black;
-    background-color: #FFC312;
+    background-color: #FFC312 !important;
     width: 100px;
 }
 

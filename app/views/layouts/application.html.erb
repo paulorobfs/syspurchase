@@ -17,12 +17,12 @@
     <%= render 'layouts/menu_top' %>
   <% end %>
 
-    <div class="container mt-3 p-3">
+  <div class="<%= css_container %>">
       <div id="flash_messages">
         <%= flash_messages %>
       </div>
       <%= yield %>
-    </div>
+  </div>
 
   <% if user_signed_in? %>
     <%#= render 'layouts/footer' %>
