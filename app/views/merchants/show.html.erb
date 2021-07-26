@@ -14,7 +14,7 @@
     </p>
 
     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-      <%= link_to 'Edit', edit_merchant_path(@merchant), class: 'btn btn-warning' %>
+      <%= link_to 'Edit', edit_merchant_path(@merchant), class: 'btn btn-warning' if can? :edit, Merchant %>
       <%= link_to 'Back', merchants_path, class: 'btn btn-secondary' %>
     </div>
   </div>

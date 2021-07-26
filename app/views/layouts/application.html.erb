@@ -18,14 +18,19 @@
   <% end %>
 
   <div class="<%= css_container %>">
-      <div id="flash_messages">
+      <div id="flash_messages"  class="<%=  container_flash_messages %>" role="alert">
         <%= flash_messages %>
       </div>
       <%= yield %>
   </div>
 
-  <% if user_signed_in? %>
-    <%#= render 'layouts/footer' %>
-  <% end %>
   </body>
 </html>
+
+<script>
+    window.setTimeout(function() {
+        $(".alert").fadeTo(500, 0).slideUp(500, function(){
+            $(this).remove();
+        });
+    }, 2000);
+</script>

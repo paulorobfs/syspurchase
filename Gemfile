@@ -14,9 +14,11 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 #autenticacao
 gem 'devise'
+gem 'cancancan'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
+gem "omniauth-rails_csrf_protection"
 
 
 #Para realizar checagem do tipo de arquivo independente de extensão

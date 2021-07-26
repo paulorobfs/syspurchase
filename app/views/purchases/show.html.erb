@@ -20,5 +20,5 @@
   <%= @purchase.count %>
 </p>
 
-<%= link_to 'Edit', edit_purchase_path(@purchase) %> |
+<%= link_to 'Edit', edit_purchase_path(@purchase) if can? :edit, Purchase  %> |
 <%= link_to 'Back', purchases_path %>

@@ -19,4 +19,10 @@ module ApplicationHelper
     end
   end
 
+  def container_flash_messages
+    unless user_signed_in?
+      'd-flex justify-content-center'
+    end
+  end
+
 end

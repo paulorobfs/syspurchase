@@ -17,7 +17,7 @@ module FlashHelper
 
   def flash_container(type, message)
     content_tag(:div, class: "alert alert-#{type} notice alert-dismissible fade show") do
-      content_tag(:button, '', class: 'btn-close', 'data-bs-dismiss': 'alert') + message
+      content_tag(:button, '', class: 'btn-close', 'data-dismiss': 'alert') + message
     end
   end
 

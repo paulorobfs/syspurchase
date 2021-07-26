@@ -21,7 +21,7 @@
     </p>
 
     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-      <%= link_to 'Edit', edit_iten_path(@iten), class: 'btn btn-warning' %>
+      <%= link_to 'Edit', edit_iten_path(@iten), class: 'btn btn-warning' if can? :edit, Item %>
       <%= link_to 'Back', itens_path, class: 'btn btn-secondary' %>
     </div>
   </div>

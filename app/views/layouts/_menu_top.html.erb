@@ -14,13 +14,20 @@
                 <li class="nav-item">
                   <%= link_to 'Purchase', purchases_path, class: 'nav-link' %>
                 </li>
-                <li class="nav-item">
-                  <%= link_to 'Upload Data', upload_index_path, class: 'nav-link' %>
-                </li>
-                <li class="nav-item">
-                  <%= link_to 'Users', users_path, class: 'nav-link' %>
-                </li>
+                <% if can? :manage, :all %>
+                  <li class="nav-item">
+                    <%= link_to 'Upload Data', upload_index_path, class: 'nav-link' %>
+                  </li>
+                <% end %>
+                <% if can? :manage, User %>
+                  <li class="nav-item">
+                    <%= link_to 'Users', users_path, class: 'nav-link' %>
+                  </li>
+                <% end %>
             </ul>
+          <span class="pe-3">
+            <%= image_tag(current_user.image, size: '30x30', class: 'rounded-circle', title: current_user.name) if current_user.image %>
+          </span>
             <form class="d-flex">
                 <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-outline-success" %>
             </form>
