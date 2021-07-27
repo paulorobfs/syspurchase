@@ -6,6 +6,7 @@ html,body{
     background-image: url('https://getwallpapers.com/wallpaper/full/f/5/f/1444561-best-game-characters-wallpaper-1920x1080-windows-7.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: black;
     height: 90%;
     font-family: 'Numans', sans-serif;
 }
@@ -22,16 +23,17 @@ html,body{
 }
 
 .card-login{
-    height: 370px;
+    /*height: 420px;*/
     margin-top: auto;
     margin-bottom: auto;
     width: 400px;
-    background-color: rgba(0,0,0,0.7) !important;
+    background-color: rgba(0,0,0,0.8) !important;
     position: relative;
     display: flex;
     flex-direction: column;
     min-width: 0;
     border-radius: 0.80rem;
+    color: white;
 }
 
 .input-group-prepend-login{
@@ -118,4 +120,8 @@ input:focus{
 .title-pages{
     font-size: 2.5rem !important;
     color: #adb5bd !important;
+}
+
+.card-footer a {
+    color: #FFC312;
 }

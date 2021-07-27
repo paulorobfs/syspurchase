@@ -17,7 +17,7 @@
       <thead>
       <tr>
         <th>User</th>
-        <th>Item</th>
+        <th>Iten</th>
         <th>Price</th>
         <th>Count</th>
         <th class="center aligned" style="width: 5%;">Actions</th>
@@ -28,7 +28,7 @@
       <% @purchases.each do |purchase| %>
         <tr>
           <td><%= purchase.user&.name %></td>
-          <td><%= purchase.item&.description %></td>
+          <td><%= purchase.iten&.description %></td>
           <td><%= purchase.price %></td>
           <td><%= purchase.count %></td>
           <td class="d-flex gap-3">

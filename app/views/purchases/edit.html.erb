@@ -1,6 +1,11 @@
-<span class="title-pages">Editing Purchase</span>
+<div class="d-flex align-items-center">
+  <div class="p-2 w-100">
+    <span class="title-pages">Edit Purchase</span>
+  </div>
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <%= link_to('Back', purchases_path, class: 'btn btn-secondary') %>
+    <%= link_to('Show', @purchase, class: 'btn btn-primary') %>
+  </div>
+</div>
 
 <%= render 'form', purchase: @purchase %>
-
-<%= link_to 'Show', @purchase %> |
-<%= link_to 'Back', purchases_path %>

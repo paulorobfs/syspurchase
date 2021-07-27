@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <div class="card mt-3 mb-3">
   <div class="card-body ">
 
@@ -21,7 +19,7 @@
     </p>
 
     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-      <%= link_to 'Edit', edit_iten_path(@iten), class: 'btn btn-warning' if can? :edit, Item %>
+      <%= link_to 'Edit', edit_iten_path(@iten), class: 'btn btn-warning' if can? :edit, Iten %>
       <%= link_to 'Back', itens_path, class: 'btn btn-secondary' %>
     </div>
   </div>

@@ -28,11 +28,11 @@ module ProcessaArquivos
         Purchase.transaction do
           begin
             merchant = Merchant.find_or_create_by!(name: row[:merchant_name], address: row[:merchant_address])
-            item = Item.find_or_create_by!(merchant_id: merchant.id, description: row[:item_description], price: row[:item_price])
+            iten = Iten.find_or_create_by!(merchant_id: merchant.id, description: row[:item_description], price: row[:item_price])
             user = User.new(admin: false, name: row[:purchaser_name], email: create_temp_email(row[:purchaser_name]))
             user.save(validate: false)
             count_p = row[:purchase_count].blank? ? 1 : row[:purchase_count].to_i
-            purchase = Purchase.create!(user_id: user.id, item_id: item.id, price: item.price * count_p, count: count_p)
+            purchase = Purchase.create!(user_id: user.id, iten_id: iten.id, price: iten.price * count_p, count: count_p)
             @valorTotal = @valorTotal + purchase.price
             @importadas += 1
           rescue ActiveRecord::Rollback

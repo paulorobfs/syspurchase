@@ -1,24 +1,28 @@
-<p id="notice"><%= notice %></p>
+<div class="card mt-3 mb-3">
+  <div class="card-body ">
+    <p>
+      <strong>User:</strong>
+      <%= @purchase.user&.name%>
+    </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @purchase.user_id %>
-</p>
+    <p>
+      <strong>Item:</strong>
+      <%= @purchase.iten&.description %>
+    </p>
 
-<p>
-  <strong>Item:</strong>
-  <%= @purchase.item_id %>
-</p>
+    <p>
+      <strong>Price:</strong>
+      <%= @purchase.price %>
+    </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @purchase.price %>
-</p>
+    <p>
+      <strong>Count:</strong>
+      <%= @purchase.count %>
+    </p>
 
-<p>
-  <strong>Count:</strong>
-  <%= @purchase.count %>
-</p>
-
-<%= link_to 'Edit', edit_purchase_path(@purchase) if can? :edit, Purchase  %> |
-<%= link_to 'Back', purchases_path %>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+      <%= link_to 'Edit', edit_purchase_path(@purchase), class: 'btn btn-warning' if can? :edit, Purchase %>
+      <%= link_to 'Back', purchases_path, class: 'btn btn-secondary' %>
+    </div>
+  </div>
+</div>
