@@ -2,9 +2,9 @@ class Purchase < ApplicationRecord
   belongs_to :user
   belongs_to :iten
 
-  validates :user_id, :count, :iten_id, presence: true
-  before_save :validate_price
+  validates :user_id, :count, :iten, presence: true
   before_save :set_price
+  before_save :validate_price
 
   def validate_price
     unless self.price.eql? self.count * self.iten.price

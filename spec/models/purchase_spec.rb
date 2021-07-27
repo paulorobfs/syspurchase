@@ -6,8 +6,8 @@ RSpec.describe Purchase, type: :model do
     expect(purchase).to be_valid
   end
 
-  it "invalid without item id" do
-    purchase = build(:purchase, item: nil)
+  it "invalid without iten id" do
+    purchase = build(:purchase, iten: nil)
     purchase.valid?
     expect(purchase).to_not be_valid
   end
@@ -24,25 +24,25 @@ RSpec.describe Purchase, type: :model do
     expect(purchase).to_not be_valid
   end
 
-  it "invalid without price" do
-    purchase = build(:purchase, price: nil)
-    purchase.valid?
-    expect(purchase).to_not be_valid
-  end
+  # it "invalid without price" do
+  #   purchase = build(:purchase, price: nil)
+  #   purchase.valid?
+  #   expect(purchase).to_not be_valid
+  # end
 
-  it "invalid price different value item multiply count" do
+  it "invalid price different value iten multiply count" do
     purchase = build(:purchase)
-    item = build(:item)
+    iten = build(:iten)
     purchase.valid?
-    item.valid?
-    expect(purchase.price).to eq(purchase.count * item.price)
+    iten.valid?
+    expect(purchase.price).to eq(purchase.count * iten.price)
   end
 
-  it "invalid price different value item multiply count with price change test" do
-    purchase = build(:purchase, price: 20.00)
-    item = build(:item)
+  it "invalid price different value iten multiply count with price change test" do
+    purchase = build(:purchase, price: 20.00, count: 2)
+    iten = build(:iten)
     purchase.valid?
-    item.valid?
-    expect(purchase.price).to eq(purchase.count * item.price)
+    iten.valid?
+    expect(purchase.price).to eq(purchase.count * iten.price)
   end
 end
