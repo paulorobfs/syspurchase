@@ -23,4 +23,5 @@ RSpec.describe User, type: :model do
     user.valid?
     expect(user).to_not be_valid
   end
+
 end

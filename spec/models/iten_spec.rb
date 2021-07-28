@@ -40,8 +40,8 @@ RSpec.describe Iten, type: :model do
     end
 
     it 'checks that a iten can be updated' do
-      @iten.update(:description => "Red Dead Rendenption 2 - Ultimate")
-      expect(Iten.find_by_description("Red Dead Rendenption 2 - Ultimate")).to eq(@iten)
+      @iten.update(description: "Red Dead Rendenption 2 - Ultimate")
+      expect(Iten.where(description: "Red Dead Rendenption 2 - Ultimate").first).to eq(@iten)
     end
 
     it 'checks that a iten can be destroyed' do
@@ -51,7 +51,7 @@ RSpec.describe Iten, type: :model do
 
     it 'checks that a iten can be destroyed' do
       @iten.destroy
-      expect(Iten.find_by(description: "Red Dead Rendenption 2 - Ultimate")).to be_nil
+      expect(Iten.where(description: "Red Dead Rendenption 2 - Ultimate").first).to be_nil
     end
   end
 
