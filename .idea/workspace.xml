@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="751af22c-51a3-47ae-9ca5-489785b5b2aa" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/spec/features/iten_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/requests/users_access_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/requests/users_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/syspurchase.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/syspurchase.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/purchases/_purchase.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/purchases/_purchase.json.jbuilder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20210721013502_create_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20210721013502_create_users.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20210721013629_add_devise_to_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20210721013629_add_devise_to_users.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/factories/iten_factory.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/iten_factory.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/factories/merchant_factory.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/merchant_factory.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/factories/purchase_factory.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/purchase_factory.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/factories/user_factory.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/user_factory.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/models/purchase_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/purchase_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/rails_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/rails_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/spec_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -40,11 +22,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="purchase_spec.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="purchase_spec.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/models/purchase_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="293">
               <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -87,7 +78,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/javascript/packs/application.js" />
         <option value="$PROJECT_DIR$/config/webpacker.yml" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
@@ -138,6 +128,7 @@
         <option value="$PROJECT_DIR$/db/migrate/20210721013629_add_devise_to_users.rb" />
         <option value="$PROJECT_DIR$/spec/factories/purchase_factory.rb" />
         <option value="$PROJECT_DIR$/spec/models/purchase_spec.rb" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -357,12 +348,12 @@
       <workItem from="1627128795211" duration="12556000" />
       <workItem from="1627269484763" duration="12471000" />
       <workItem from="1627335435865" duration="17155000" />
-      <workItem from="1627430759724" duration="12804000" />
+      <workItem from="1627430759724" duration="12921000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86668000" />
+    <option name="totallyTimeSpent" value="86785000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="48" y="27" width="1872" height="1053" extended-state="6" />
@@ -444,13 +435,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/itens/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="33" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/purchases_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
@@ -754,6 +738,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
           <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
         </state>
       </provider>
     </entry>
