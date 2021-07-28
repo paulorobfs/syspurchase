@@ -31,8 +31,8 @@ RSpec.describe Purchase, type: :model do
   # end
 
   it "invalid price different value iten multiply count" do
-    purchase = build(:purchase)
-    iten = build(:iten)
+    purchase = build(:purchase, price: 20.00, count: 2)
+    iten = build(:iten, price: 10.00)
     purchase.valid?
     iten.valid?
     expect(purchase.price).to eq(purchase.count * iten.price)
@@ -40,9 +40,9 @@ RSpec.describe Purchase, type: :model do
 
   it "invalid price different value iten multiply count with price change test" do
     purchase = build(:purchase, price: 20.00, count: 2)
-    iten = build(:iten)
+    iten = build(:iten, price: 50.00)
     purchase.valid?
     iten.valid?
-    expect(purchase.price).to eq(purchase.count * iten.price)
+    expect(purchase.price).not_to eq(purchase.count * iten.price)
   end
 end

@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :merchant do
-    name { "Market Plus Games" }
-    address { "St Locky Street 30" }
+    name { Faker::Company.name }
+    address { Faker::Address.street_address }
   end
 end

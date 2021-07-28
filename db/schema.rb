@@ -33,17 +33,17 @@ ActiveRecord::Schema.define(version: 2021_07_26_220013) do
 
   create_table "purchases", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.bigint "item_id", null: false
+    t.bigint "iten_id", null: false
     t.decimal "price"
     t.integer "count"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["item_id"], name: "index_purchases_on_item_id"
+    t.index ["iten_id"], name: "index_purchases_on_iten_id"
     t.index ["user_id"], name: "index_purchases_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.boolean "admin"
+    t.boolean "admin", default: false
     t.string "name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -60,6 +60,6 @@ ActiveRecord::Schema.define(version: 2021_07_26_220013) do
   end
 
   add_foreign_key "itens", "merchants"
-  add_foreign_key "purchases", "itens", column: "item_id"
+  add_foreign_key "purchases", "itens"
   add_foreign_key "purchases", "users"
 end
