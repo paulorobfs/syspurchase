@@ -23,4 +23,36 @@ RSpec.describe Iten, type: :model do
     iten.valid?
     expect(iten).to_not be_valid
   end
+
+  context "testing complete crud" do
+    before(:all) do
+      @merchant = Merchant.create(name: "Games Forever", address: "Future Street")
+      @current_date = DateTime.now
+      @iten = Iten.create(description: "Red Dead Rendenption", price: 100.00, merchant: @merchant, created_at: @current_date)
+    end
+
+    it 'checks that a iten can be created' do
+      expect(@iten).to be_valid
+    end
+
+    it 'checks that a iten can be read' do
+      expect(Iten.where(description: "Red Dead Rendenption", created_at: @current_date).first).to eq(@iten)
+    end
+
+    it 'checks that a iten can be updated' do
+      @iten.update(:description => "Red Dead Rendenption 2 - Ultimate")
+      expect(Iten.find_by_description("Red Dead Rendenption 2 - Ultimate")).to eq(@iten)
+    end
+
+    it 'checks that a iten can be destroyed' do
+      @iten.destroy
+      expect(Iten.count).to be > 0
+    end
+
+    it 'checks that a iten can be destroyed' do
+      @iten.destroy
+      expect(Iten.find_by(description: "Red Dead Rendenption 2 - Ultimate")).to be_nil
+    end
+  end
+
 end

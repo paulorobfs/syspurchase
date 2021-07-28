@@ -1,6 +1,12 @@
-<span class="title-pages">Editing User</span>
+<div class="d-flex align-items-center">
+  <div class="p-2 w-100">
+    <span class="title-pages">Edit User</span>
+  </div>
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <%= link_to('Back', users_path, class: 'btn btn-secondary') %>
+    <%= link_to('Show', @user, class: 'btn btn-primary') %>
+  </div>
+</div>
 
 <%= render 'form', user: @user %>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>

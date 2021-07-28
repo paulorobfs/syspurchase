@@ -21,7 +21,7 @@ RSpec.describe "UsersAccess", type: :request do
     end
   end
 
-  describe "POST /merchant" do
+  describe "User dont manage" do
 
     let(:user) {create(:user, admin: false)}
     subject(:ability) { Ability.new(user) }
@@ -44,17 +44,27 @@ RSpec.describe "UsersAccess", type: :request do
     end
   end
 
-  # describe "POST /users" do
-  #   context "when it has valid parameters" do
-  #     it "create the users with correct attributes"
-  #   end
-  #
-  #   context "when it has no valid parameters" do
-  #     it "does not create user"
-  #   end
-  #
-  # end
+  describe "User manage" do
 
+    let(:user) {create(:user, admin: true)}
+    subject(:ability) { Ability.new(user) }
+    subject {sign_in user}
 
+    it "user admin manage Merchant" do
+      assert ability.can?(:manage, create(:merchant))
+    end
+
+    it "user admin manage Purchase" do
+      assert ability.can?(:manage, create(:purchase))
+    end
+
+    it "user admin manage Iten" do
+      assert ability.can?(:manage, create(:iten))
+    end
+
+    it "user admin manage User" do
+      assert ability.can?(:manage, create(:user))
+    end
+  end
 
 end

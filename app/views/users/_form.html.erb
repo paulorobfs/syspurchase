@@ -1,27 +1,47 @@
-<%= form_with(model: user, local: true) do |form| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<div class="card mt-3 mb-3">
+  <div class="card-body ">
+    <%= form_with(model: user, local: true) do |form| %>
+      <% if user.errors.any? %>
+        <div id="error_explanation" class="alert alert-danger" role="alert">
+          <h3><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h3>
+          <hr>
+          <ul>
+            <% user.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
 
-      <ul>
-        <% user.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+      <div class="form-group col-sm-4 mb-3">
+        <%= form.label :admin %>
+        <%= form.check_box :admin %>
+      </div>
 
-  <div class="field">
-    <%= form.label :admin %>
-    <%= form.check_box :admin %>
+      <div class="form-group col-sm-4 mb-3">
+        <%= form.label :name, class: 'form-label' %>
+        <%= form.text_field :name, class: 'form-control', autofocus: true, autocomplete: "name"   %>
+      </div>
+
+      <div class="form-group col-sm-4 mb-3">
+        <%= form.label :email, class: 'form-label' %>
+        <%= form.email_field :email,class: 'form-control'   %>
+      </div>
+
+      <div class="form-group col-sm-4 mb-3">
+        <%= form.label :password, class: 'form-label' %>
+        <%= form.password_field :password, autocomplete: "new-password" , class: 'form-control', required: true %>
+      </div>
+
+      <div class="form-group col-sm-4 mb-3">
+        <%= form.label :password_confirmation, class: 'form-label' %>
+        <%= form.password_field :password_confirmation, autocomplete: "new-password" , class: 'form-control', required: true %>
+      </div>
+
+      <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+        <%= link_to 'Cancel', users_path, class: 'btn btn-danger' %>
+        <%= form.submit nil, class: 'btn btn-success'%>
+      </div>
+    <% end %>
   </div>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>
