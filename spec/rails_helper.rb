@@ -2,7 +2,14 @@
 require 'spec_helper'
 require 'devise'
 require "cancan/matchers"
+
 ENV['RAILS_ENV'] ||= 'test'
+
+if ENV['RAILS_ENV'] == 'test'
+  require 'simplecov'
+  SimpleCov.start 'rails'
+  puts "required simplecov"
+end
 
 require File.expand_path('../config/environment', __dir__)
 

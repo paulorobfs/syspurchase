@@ -41,16 +41,13 @@ RSpec.describe Purchase, type: :model do
   end
 
   context "testing complete crud" do
-    before(:all) do
-      @current_date = DateTime.now
-      @purchase = Purchase.create(user: User.create(name:"Jhon Doe", email: "jhondoe@gmail.com", password: "123456"),
-                                  iten: Iten.create(description: "Red Dead Rendenption", price: 100.00, 
-                                                    merchant: @merchant = Merchant.create(name: "Games Forever", address: "Future Street")), 
-                                  price: 200.00, count: 2, created_at: @current_date)
-    end
+    let(:merchant) {create(:merchant)}
+    let(:user) {create(:user)}
+    let(:iten) {create(:iten, description: "Red Dead Rendenption", merchant: merchant)}
+    subject(:purchase) {create(:purchase, user: user, iten: iten, price: 200.00, count: 2)}
 
     it 'checks that a purchase can be created' do
-      expect(@purchase).to be_valid
+      expect(purchase).to be_valid
     end
 
     it 'checks that a purchase can be read' do
@@ -58,18 +55,9 @@ RSpec.describe Purchase, type: :model do
     end
 
     it 'checks that a purchase can be updated' do
-      @purchase.update(count: 3, price: "300.00")
-      expect(purchase.where(id: @purchase.id, count: 3, price: 300.00).first).to eq(@purchase)
+      purchase.update(count: 3, price: "300.00")
+      expect(Purchase.where(id: purchase.id, count: 3, price: 300.00).first).to eq(@purchase)
     end
 
-    it 'checks that a purchase can be destroyed' do
-      @purchase.destroy
-      expect(Purchase.count).to > 0
-    end
-
-    it 'checks that a purchase can be destroyed' do
-      @purchase.destroy
-      expect(purchase.where(count: 3, price: "300.00", created_at: @current_date ).first).to be_nil
-    end
   end
 end

@@ -10,12 +10,12 @@
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="input-group mb-3">
           <span class="input-group-text input-group-login-color"><i class="fas fa-user"></i></span>
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control', required: true %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", id: "email", class: 'form-control', required: true %>
 
         </div>
         <div class="input-group mb-3">
           <span class="input-group-text input-group-login-color"><i class="fas fa-key"></i></span>
-          <%= f.password_field :password, autocomplete: "current-password", class: 'form-control', required: true %>
+          <%= f.password_field :password, autocomplete: "current-password", id: "password", class: 'form-control', required: true %>
         </div>
         <div class="row align-items-center remember">
           <% if devise_mapping.rememberable? %>
@@ -27,7 +27,7 @@
         </div>
         <div class="form-group">
           <div class="d-flex justify-content-end">
-            <%= f.submit "Log in", class: 'btn login_btn' %>
+            <%= f.submit "Log in", class: 'btn login_btn', id: 'log in' %>
           </div>
         </div>
       <% end %>

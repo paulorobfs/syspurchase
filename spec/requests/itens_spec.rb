@@ -17,26 +17,4 @@ RSpec.describe "Itens", type: :request do
     end
   end
 
-
-  describe "POST /itens" do
-    context "when it has valid parameters" do
-      it "create the itens with correct attributes" do
-        iten_attributes = FactoryBot.attributes_for(:iten)
-        post itens_path, params: {iten: iten_attributes}
-        expect(Iten.last).to have_attributes(iten_attributes)
-      end
-    end
-
-    context "when it has no valid parameters" do
-      it "does not create iten" do
-        expect {
-          post itens_path, params: {iten: {description: nil, price: nil}}
-        }.to_not change(Iten, :count)
-      end
-    end
-
-  end
-
-
-
 end

@@ -18,26 +18,6 @@ RSpec.describe "Merchants", type: :request do
   end
 
 
-  describe "POST /merchants" do
-    # context "when it has valid parameters" do
-    #   it "create the merchants with correct attributes" do
-    #     merchant_attributes = FactoryBot.attributes_for(:merchant)
-    #     post merchants_path, params: {merchant: merchant_attributes}
-    #     expect(Merchant.last).to have_attributes(merchant_attributes)
-    #   end
-    # end
-
-    context "when it has no valid parameters" do
-      it "does not create merchant" do
-        expect {
-          post merchants_path, params: {merchant: {name: nil, address: nil}}
-        }.to_not change(Merchant, :count)
-      end
-    end
-
-  end
-
-
   describe "Update /update" do
     context 'When user has signed in ' do
       let!(:user) { create(:user, admin: true) }

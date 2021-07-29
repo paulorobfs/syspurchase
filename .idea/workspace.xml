@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="751af22c-51a3-47ae-9ca5-489785b5b2aa" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/spec/requests/itens_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/requests/merchants_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/requests/purchases_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/merchants/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/merchants/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/upload/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/upload/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/models/iten_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/iten_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/requests/users_access_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/requests/users_access_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/requests/users_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/requests/users_spec.rb" afterDir="false" />
-    </list>
+    <list default="true" id="751af22c-51a3-47ae-9ca5-489785b5b2aa" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -72,8 +59,8 @@
       <file leaf-file-name="iten_spec.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spec/models/iten_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="38" column="93" selection-start-line="38" selection-start-column="93" selection-end-line="38" selection-end-column="93" />
+            <state relative-caret-position="308">
+              <caret line="48" column="34" lean-forward="true" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -461,16 +448,15 @@
       <workItem from="1627128795211" duration="12556000" />
       <workItem from="1627269484763" duration="12471000" />
       <workItem from="1627335435865" duration="17155000" />
-      <workItem from="1627430759724" duration="18502000" />
+      <workItem from="1627430759724" duration="18625000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92366000" />
+    <option name="totallyTimeSpent" value="92489000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="48" y="27" width="1872" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32988358" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50213444" side_tool="true" weight="0.33404255" />
@@ -676,13 +662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/models/purchase_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/features/iten_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -874,10 +853,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/spec/models/purchase_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/spec/models/iten_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="38" column="93" selection-start-line="38" selection-start-column="93" selection-end-line="38" selection-end-column="93" />
+        <state relative-caret-position="308">
+          <caret line="48" column="34" lean-forward="true" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
         </state>
       </provider>
     </entry>

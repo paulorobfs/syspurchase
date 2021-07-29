@@ -8,11 +8,6 @@ RSpec.describe "UsersAccess", type: :request do
       sign_in user
       get root_path
       expect(response).to have_http_status(200)
-
-
-      sign_out user
-      get root_path
-      expect(response).to have_http_status(302)
     end
 
     it "testing user access not logged devise" do

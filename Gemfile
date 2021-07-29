@@ -31,6 +31,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.9.0'
   gem 'factory_bot_rails', '~> 4.0'
   gem 'capybara', '>= 2.15'
+  gem 'simplecov'
 end
 
 group :development do

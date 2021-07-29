@@ -21,9 +21,10 @@ RSpec.describe "Users", type: :request do
   describe "POST /users" do
     context "when it has valid parameters" do
       it "create the users with correct attributes" do
+        qtd = User.count
         user_attributes = FactoryBot.attributes_for(:user)
         post users_path, params: {user: user_attributes}
-        expect(User.last).to have_attributes(user_attributes)
+        expect(User.count).to be > qtd
       end
     end
 
@@ -36,7 +37,5 @@ RSpec.describe "Users", type: :request do
     end
 
   end
-
-
 
 end
